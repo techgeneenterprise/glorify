@@ -1,6 +1,3 @@
-html {
-    font-size: 62.5%;
-}
 
 :root {
     --color-primary: #2584ff;
@@ -8,6 +5,12 @@ html {
     --color-accent: #ff3400;
     --color-heading:#5d4f91;
     --color-body:#c1becb;
+}
+
+/* TOYPOGRAPY */
+
+html {
+    font-size: 62.5%;
 }
 
 body {
@@ -49,4 +52,32 @@ p {
     h3 {
         font-size: 2.4rem;
     }
+}
+
+/* LINK */
+
+a {
+    text-decoration: none;
+}
+.link-arrow {
+    color: var(--color-accent);
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: bold;
+    transition: margin 0.15s;
+}
+
+.link-arrow::after {
+    content: "-->";
+    margin-left: 5px;
+}
+.link-arrow:hover::after {
+    margin-left: 10px;
+}
+
+@media screen and (min-width:1024px) {
+    .link-arrow {
+        font-size: 1.5rem;
+    }
+    
 }
