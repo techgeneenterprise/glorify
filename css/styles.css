@@ -219,6 +219,11 @@ a {
     display: inline-block;
 }
 
+.btn--streached{
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+
 .btn--outline {
     background: #fff;
     border: 2px solid var(--color-heading);
@@ -459,6 +464,39 @@ a {
     }
     .testimonial .quote{
         margin-left: 6rem;
+    }
+    
+}
+
+/* CALLOUT */
+.callout{
+    padding: 4rem;
+    border-radius: 5px;
+}
+.callout--primary{
+    background: var(--color-primary);
+    color: #fff;
+}
+.callout__heading{
+    color: #fff;
+    margin-top: 0;
+    font-size: 3rem;
+}
+
+.callout .btn{
+    justify-self: center;
+    align-self: center;
+}
+.callout__content{
+    text-align: center;
+}
+
+@media screen and (min-width:786px) {
+    .callout__content {
+        text-align: left;
+    }
+    .grid--cols-2 {
+        grid-template-columns: 1fr auto;
     }
     
 }
