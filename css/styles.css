@@ -7,6 +7,7 @@
     --color-body:#c1becb;
     --color-body-darker:#7a748f;
     --color-border: #ccc;
+    --border-radius: 50px;
 }
  *, *::before, *::after {
      box-sizing: border-box;
@@ -189,6 +190,7 @@ a {
     font-size: 1.8rem;
     font-weight: 600;
     margin: 1rem 0;
+    outline: 0;
     padding: 2rem 3rem;
     text-align: center;
     text-transform: uppercase;
@@ -242,7 +244,7 @@ a {
 }
     
 .input{
-    border-radius: 30px;
+    border-radius: var(--border-radius);
     border: 1px solid var(--color-border);
     color: var(--color-heading);
     font-size: 2rem;
@@ -257,14 +259,18 @@ a {
 
 .input-group{
     border: 1px  solid var(--color-border);
-    border-radius: 30px;
+    border-radius: var(--border-radius);
     display: flex;
 }
 
 .input-group .input {
     border: 0;
     flex-grow: 1;
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 2rem;
+}
+
+.input-group .btn{
+    margin: 4px;
 }
 
 @media screen and (min-width:1024px) {
@@ -644,6 +650,32 @@ a {
     .hero__content{
         text-align: left;
         align-self: center;
+    }
+    
+}
+
+/* DOMANI BLOCK */
+.block-domain .input-group{
+    box-shadow: 0 0 30px 20px #e6ebee;
+    border: 0;
+    margin: 4rem auto;
+    max-width: 600px;
+}
+
+.block-domain__price{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 6rem);
+    font-size: 2rem;
+    font-weight: 600;
+    justify-items: center;
+    max-width: 730px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 786px) {
+    .block-domain__price{
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     }
     
 }
