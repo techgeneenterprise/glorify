@@ -301,11 +301,19 @@ a {
     color: #fff;
 }
 
+.card--primary .badge--primary{
+    background: #126de4;
+}
+
 .card--secondary .badge--secondary{
     background: #02cdf1;
 }
 
 /* PLANS */
+
+.plan{
+    transition: 0.2s ease-out;
+}
 
 .plan__name {
     margin: 0;
@@ -331,7 +339,10 @@ a {
 }
 .plan .list__item{
     margin-bottom: 2rem;
-    
+}
+
+.plan--popular{
+    transform: scale(1.1);
 }
 
 .plan--popular .card__header{
@@ -345,6 +356,13 @@ a {
     position: absolute;
     top: -3px;
     right: 5%;
+}
+
+.plan:hover{
+    transform: scale(1.05);
+}
+.plan--popular:hover{
+    transform: scale(1.15);
 }
 
 @media screen and (min-width:1024px) {
@@ -432,17 +450,19 @@ a {
 .grid{
     display:grid
     
+    
 }
 
 @media screen and (min-width: 768px) {
     .grid--cols-2{
-        grid-template-columns: repeat(2, 1fr)
+        grid-template-columns: repeat(2, 1fr);
     }
     
 }
 @media screen and (min-width: 1024px) {
     .grid--cols-3{
-        grid-template-columns: repeat(3, 1fr)
+        grid-template-columns: repeat(3, 1fr);
+        
     }
     
 }
@@ -678,4 +698,13 @@ a {
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     }
     
+}
+
+/* PLANS BLOCK */
+.block-plans .grid{ 
+    gap: 8rem 4rem;
+}
+.block-plans .card{
+    max-width: 500px;
+    margin: 0 auto;
 }
