@@ -12,7 +12,12 @@
  *, *::before, *::after {
      box-sizing: border-box;
  }
-/* TOYPOGRAPY */
+/* TYPOGRAPY */
+
+::selection{
+    background: var(--color-primary);
+    color: #fff;
+}
 
 html {
     font-size: 62.5%;
@@ -39,7 +44,7 @@ h2 {
 
 h3 {
     font-size: 3rem;
-    
+    font-weight: 500;; 
 }
 p {
     margin-top: 0;
@@ -126,8 +131,8 @@ a {
 
 .list {
     list-style: none;
-    color: var(--color-heading);
-
+    padding-left: 0;
+    
 }
 
 .list--inline .list__item {
@@ -136,6 +141,7 @@ a {
 }
 .list--tick {
     list-style-image: url(../images/tick.svg);
+    color: var(--color-heading);
 }
 
 .list--tick .list__item {
@@ -386,7 +392,7 @@ a {
 /* MEDIA */
 .media{
     display: flex;
-    /* color: #fff; */
+    margin-bottom: 4rem;
 }
 .media__title{
     margin-top: 0;
@@ -448,10 +454,9 @@ a {
 
 /* GRIDS */
 .grid{
-    display:grid
-    
-    
+    display:grid;
 }
+
 
 @media screen and (min-width: 768px) {
     .grid--cols-2{
@@ -574,8 +579,13 @@ a {
     background: #000;
     color: #7b858b;
 }
-.block--dark .block__heading{
+
+.block--dark h1,
+.block--dark h2,
+.block--dark h3
+{
     color: #fff;
+
 }
 
 .block--skewed-right{
@@ -728,6 +738,25 @@ a {
 @media screen and (min-width:768px){
     .feature:nth-of-type(even) .feature__content{
         order:2;
+    }
+    
+}
+
+/* SHOWCASE */
+.block-showcase__image >img{
+    width: 100%;
+}
+
+@media screen and (min-width:768px) {
+    .block-showcase .grid{
+        grid-template-columns: 50% 50%;
+    }
+    .block-showcase__image{
+    width: auto;
+    }
+    .block-showcase__image >img {
+        max-width: 700px;
+        justify-self: end;
     }
     
 }
