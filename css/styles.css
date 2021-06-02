@@ -197,7 +197,7 @@ a {
     font-weight: 600;
     margin: 1rem 0;
     outline: 0;
-    padding: 2rem 3rem;
+    padding: 2rem 4vw;
     text-align: center;
     text-transform: uppercase;
     white-space: nowrap;
@@ -273,6 +273,7 @@ a {
     border: 0;
     flex-grow: 1;
     padding: 1.5rem 2rem;
+    width: 0;
 }
 
 .input-group .btn{
@@ -508,10 +509,12 @@ a {
     }
   }
 /* CALLOUT */
+
 .callout{
     padding: 4rem;
-    border-radius: 5px;
+    border-radius: 5px;    
 }
+
 .callout--primary{
     background: var(--color-primary);
     color: #fff;
@@ -529,6 +532,10 @@ a {
 .callout__content{
     text-align: center;
 }
+/* Sign-up Callout */
+.callout-signup {
+    transform: translateY(10rem);
+  }
 
 @media screen and (min-width:786px) {
     .callout__content {
@@ -571,7 +578,7 @@ a {
 
 /* BLOCKS */
 .block{
-    --padding-verticle: 6rem;
+    --padding-verticle: 4rem;
     padding: var(--padding-verticle) 2rem;
    
 }
@@ -701,8 +708,9 @@ a {
 }
 
 .block-domain__price{
+    color: var(--color-heading);
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 6rem);
     font-size: 2rem;
     font-weight: 600;
@@ -771,6 +779,7 @@ a {
 /* FOOTER */
 .footer{
     background: #232323;
+    padding-top: 15rem;
 }
 .footer__section{
     padding: 2rem;
@@ -792,6 +801,9 @@ a {
 }
 .footer a{
     color: #777;
+}
+.footer li{
+    line-height: 3.5rem;
 }
 .footer a:hover{
     color: #fff;
